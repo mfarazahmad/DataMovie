@@ -4,14 +4,21 @@ from pymongo import MongoClient
 import pandas as pd
 import json
 
-client = MongoClient('example.com', username='user', password='password', authSource='the_database', authMechanism='SCRAM-SHA-256')
+def populate_csv():
+    #Connects to MongoDB
+    cursor = pymongo.MongoClient("mongodb://localhost:27017/")
+    db = cursor["movie_db"]
+    collection = db["customers"]
 
-#Loads data from CSV into a dataframe
-frame = pd.read_csv('support/movie_metadata.csv', encoding = 'ISO-8859-1')
-frame.to_json('movie_data.json')                             
-frame = open('movie_data.json').read()                       
-data = json.loads(frame)  
+    #Loads data from CSV into a dataframe
+    frame = pd.read_csv('support/movie_metadata.csv', encoding = 'ISO-8859-1')
+    frame.to_json('movie_data.json')                             
+    frame = open('movie_data.json').read()                       
+    data = json.loads(frame)  
+    print(data)
 
-print(data)
+    db_response = collection.insert_one(data)
+    print(db_response)
 
-
+if __name__ == ("__main__"):
+    populate_csv()
