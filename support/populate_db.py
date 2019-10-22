@@ -1,10 +1,10 @@
 """ Populate's Mongo DB from  CSV """
 
-from mongoengine import connect
+from pymongo import MongoClient
 import pandas as pd
 import json
 
-connect('project1', host='192.168.1.35', port=12345, username='webapp', password='pwd123', authentication_source='admin')
+client = MongoClient('example.com', username='user', password='password', authSource='the_database', authMechanism='SCRAM-SHA-256')
 
 #Loads data from CSV into a dataframe
 frame = pd.read_csv('support/movie_metadata.csv', encoding = 'ISO-8859-1')
@@ -13,4 +13,5 @@ frame = open('movie_data.json').read()
 data = json.loads(frame)  
 
 print(data)
+
 

@@ -63,5 +63,6 @@ Extra Features
 -- Using actual templates using Jinja2 to show api info, with proper embedded css
 -- Links on the home page using Flask's url_for to route to the routes listed
 -- Securing API access with token or another form of Authentication ie. Oauth2
+-- Secure the Local DB with Credentials
 
 """

@@ -1,4 +1,4 @@
-import MongoEngine
+from pymongo import MongoClient
 import os
 
 hostname = os.environ.get("hostname")
