@@ -11,13 +11,11 @@ def populate_csv():
     collection = db["movie_stats"]
 
     #Loads data from CSV into a dataframe
-    frame = pd.read_csv('support/movie_metadata.csv', encoding = 'ISO-8859-1')
-    frame.to_json('movie_data.json')                             
-    frame = open('movie_data.json').read()                       
-    data = json.loads(frame)  
+    frame = pd.read_csv('support/movie_metadata.csv', encoding = 'ISO-8859-1')                   
+    data = json.loads(frame.to_json(orient='records'))  
     print(data)
 
-    db_response = collection.insert_one(data)
+    db_response = collection.insert_many(data)
     print(db_response)
 
 if __name__ == ("__main__"):

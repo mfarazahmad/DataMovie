@@ -1,6 +1,6 @@
 import os
 from flask_cors import CORS
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify
 import analytics as parser
 
 app = Flask(__name__)

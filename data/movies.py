@@ -7,11 +7,10 @@ class Movie():
         self.actor2 = ""
         self.actor3 = ""
         self.director = ""
-        self.fb_likes = ""
         self.bugdet = ""
         self.gross = ""
         self.genres = ""
-
+        self.fb_likes = ""
 
     def calculate_likes():
         pass

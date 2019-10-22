@@ -12,18 +12,3 @@ def db_access():
     collection = db["movie_stats"]
 
     return collection
-
-class Actor():
-
-    def __init__(self, name):
-        self.name = name
-        self.likes = 0
-        self.grossing_movie = ""
-        self.recognized_for = ""
-        self.top_genre = ""
-
-    def calculate_likes():
-        pass
-
-    def calculate():
-        pass
