@@ -45,11 +45,11 @@ if __name__ == "__main__":
 """
 Starting
 - Initialize Folder into a git repo
-- Checkout a branch from master per feature and merge them into qa, and then master as you work
-- Plan app architecture into simple blueprint like folders based on function (no need to use flask blueprints)
+- Checkout a branch from master per feature and merge them into master as you work. (Typical branch flow dev_feature -> qa -> prod)
+- Plan app architecture into simple blueprint like folders based on function (No need to use flask blueprints)
 Data Management
 - Make a mongo db instance. Store access info as environment variables.
-- Use Pymongo ORM to populate DB with CSV Data
+- Use MongoEngine ORM to populate DB with CSV Data
 - Write out data models for mongodb data
 - Import data into data classes (ex. actor) for use.
 API
