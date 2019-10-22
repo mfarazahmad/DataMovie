@@ -1,0 +1,13 @@
+from .models import *
+
+class Actor():
+
+    def __init__(self, name):
+        self.name = name
+        self.likes = 0
+        self.grossing_movie = ""
+        self.recognized_for = ""
+        self.top_genre = ""
+
+    def calculate_likes():
+        pass
