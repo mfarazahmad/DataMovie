@@ -1,5 +1,5 @@
 import pandas
-from .data.actor import Actor
+from data.actor import Actor
 
 def topTenGenres():
     """ This method is used to calculate the top ten genres and return it in order of decreasing profitablity. """

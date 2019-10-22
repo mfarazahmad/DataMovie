@@ -1,5 +1,5 @@
 import os
-from .analytics import * as parser
+from analytics import *
 from flask_cors import CORS
 from flask import Flask, jsonify, render_template
 
@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route('/', methods=['GET'])
-def top_stats():
+def home():
 
     base_template = """<h1>Welcome to the Movie Stats Home Page!</h1>
                     <p>API Directory</p>
@@ -21,22 +21,22 @@ def top_stats():
 
 @app.route('/api/top_stats', methods=['GET'])
 def top_stats():
-    genre_stats = parser.topTenGenres()
-    actor_stats = parser.topTenActors()
-    director_stats = parser.topTenDirectors()
+    genre_stats = topTenGenres()
+    actor_stats = topTenActors()
+    director_stats = topTenDirectors()
 
     stats = {'top_ten_genres': genre_stats, 'top_ten_actors': actor_stats, 'top_ten_directors':director_stats}
 
     return jsonify(stats)
 
 @app.route('/api/get_actors', methods=['GET'])
-def actorStats():
-    stats = parser.get_actors()
+def get_actors():
+    stats = get_actors()
     return jsonify(stats)
 
 @app.route('/api/<string:actorname>', methods=['GET'])
 def actorStats():
-    stats = parser.actorStats(actorname)
+    stats = actorStats(actorname)
     return jsonify(stats)
 
 if __name__ == "__main__":
