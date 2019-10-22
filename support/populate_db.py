@@ -3,10 +3,12 @@
 from pymongo import MongoClient
 import pandas as pd
 import json
-from data.models import db_access
 
 def populate_csv():
-    collection = db_access()
+    #Connects to MongoDB
+    cursor = MongoClient('localhost', 27017)
+    db = cursor["movie_db"]
+    collection = db["movie_stats"]
 
     #Loads data from CSV into a dataframe
     frame = pd.read_csv('support/movie_metadata.csv', encoding = 'ISO-8859-1')

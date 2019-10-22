@@ -1,7 +1,7 @@
 import os
-import analytics as parser
 from flask_cors import CORS
 from flask import Flask, jsonify, render_template
+import analytics as parser
 
 app = Flask(__name__)
 CORS(app)
@@ -49,7 +49,7 @@ Starting
 - Checkout a branch from master per feature and merge them into master as you work. (Typical branch flow dev_feature -> qa -> prod)
 - Plan app architecture into simple blueprint like folders based on function (No need to use flask blueprints)
 Data Management
-- Make a mongo db instance. (Store access creds as environment variables)
+- Make a mongo db instance. (Store access creds as environment variables | Will add to path later)
 - Use MongoEngine ORM to populate DB with CSV Data
 - Write out data models for mongodb data
 - Import data into data classes (ex. actor) for use.
