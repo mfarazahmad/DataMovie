@@ -16,6 +16,10 @@ def topTenDirectors():
     topGenres = []
     return topGenres
 
+def actorList():
+    actors = []
+    return actors
+
 def actorStats(actorname):
     actor = Actor(actorname)
 
