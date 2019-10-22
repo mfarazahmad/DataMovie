@@ -6,7 +6,7 @@ import json
 
 def populate_csv():
     #Connects to MongoDB
-    cursor = pymongo.MongoClient("mongodb://localhost:27017/")
+    cursor = MongoClient("mongodb://localhost:27017/")
     db = cursor["movie_db"]
     collection = db["customers"]
 

@@ -15,5 +15,7 @@ class Actor():
         self.top_genre = ""
 
     def calculate_likes():
+        pass
 
-    def calculate
+    def calculate():
+        pass
