@@ -40,21 +40,21 @@ def actorStats(actorname):
     return jsonify(stats)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, threaded=True)
 
 """
 Starting
-- Initialize Folder into a git repo
-- Create virtualenv and install packages
-- Checkout a branch from master per feature and merge them into master as you work. (Typical branch flow dev_feature -> qa -> prod)
-- Plan app architecture into simple blueprint like folders based on function (No need to use flask blueprints)
+X Initialize Folder into a git repo
+X Create virtualenv and install packages
+X Checkout a branch from master per feature and merge them into master as you work. (Typical branch flow dev_feature -> qa -> prod)
+X Plan app architecture into simple blueprint like folders based on function (No need to use flask blueprints)
 Data Management
-- Make a mongo db instance. (Store access creds as environment variables | Will add to path later)
-- Use MongoEngine ORM to populate DB with CSV Data
-- Write out data models for mongodb data
-- Import data into data classes (ex. actor) for use.
+X Make a mongo db instance. (Store access creds as environment variables | Will add to path later)
+X Use MongoEngine ORM to populate DB with CSV Data
+X Write out data models for mongodb data
+X Import data into data classes (ex. actor) for use.
 API
-- Create three routes. One for overall stats. One for stats based on actor name. One for a list of actor names.
+X Create three routes. One for overall stats. One for stats based on actor name. One for a list of actor names.
 Data Analytics
 - Calculate analytics using data classes
 Testing
