@@ -56,7 +56,7 @@ X Create route for overall top ten stats.
 X Create route for stats based on actor name. 
 X Create route for a list of actor names.
 Data Analytics
-- Top Genres in Decreasing Order of Profitability
+X Top Genres in Decreasing Order of Profitability
 X Top Directors in Decreasing Order of Profitability
 X Calculate a actor's most profitable movie
 Testing
@@ -64,6 +64,7 @@ Testing
 - Write Unit Tests for Testing Database, Making a new Class, Testing out Anlytics Functions, Creating an app
 
 Extra Features
+-- Fix unicode random character issues for fields like movie and actor names before importing the data into the database.
 -- Using actual templates using Jinja2 to show api info, with proper embedded css
 -- Links on the home page using Flask's url_for to route to the routes listed
 -- Securing API access with token or another form of Authentication ie. Oauth2
