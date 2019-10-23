@@ -1,7 +1,18 @@
 from .models import *
+from mongoengine import *
 
-class Movie():
+class Movie(Document):
+    actor1 = DictField()
+    actor2 = DictField()
+    actor3 = DictField()
+    director = StringField()
+    bugdet = IntField()
+    gross = IntField()
+    fb_likes = IntField()
+    genres = ListField()
 
+class Alt_Movie(Document):
+    
     def __init__(self):
         self.actor1 = ""
         self.actor2 = ""
