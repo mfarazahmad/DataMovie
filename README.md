@@ -19,6 +19,8 @@ ______
 X Initialize Folder into a git repo
 X Create virtualenv and install packages | Flask, Pandas, PyMongo, & MongoEngine are key here
 X Checkout a branch from master per feature and merge them into master as you work. (Typical branch flow dev_feature -> qa -> prod)
+-- Created 3 branches far_data_access, far_analytics far_testing and merged them in however only pushed master to github
+
 X Plan app architecture into simple blueprint like folders based on function (No need to use flask blueprints)
 
 ### Data Management
