@@ -15,10 +15,13 @@ class Actor():
         profits = [0]
 
         movie_data = movie_stats.objects(Q(actor_1_name=self.name) | Q(actor_2_name=self.name) | Q(actor_3_name=self.name))
-           
+        genres = set()
         for movie in movie_data:
             self.movies.append(movie.movie_title.replace(u'\xa0',u'').replace('Â ', ''))
-            self.genres.append(movie.genres.replace(u'\xa0',u'').replace('Â ', ''))
+            
+            genre_list = movie.genres.split('|')
+            for genre in genre_list:
+                genres.add(str(genre).replace(u'\xa0',u'').replace('Â ', ''))
 
             if self.name == movie.actor_1_name:
                 self.facebook_likes = movie.actor_1_facebook_likes
@@ -31,3 +34,4 @@ class Actor():
                 profits.append((movie.gross - movie.budget)/movie.budget)
                 if max(profits) > self.highest_profit['profit']:
                     self.highest_profit = {"movie": movie.movie_title, "profit":max(profits)}
+        self.genres.append(list(genres))
