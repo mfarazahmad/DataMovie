@@ -1,11 +1,10 @@
 """ Populate's Mongo DB from  CSV """
-
 from pymongo import MongoClient
 import pandas as pd
 import json
 
 def populate_csv():
-    #Connects to MongoDB
+    #Connects to MongoDBs
     cursor = MongoClient('localhost', 27017)
     db = cursor["movie_db"]
     collection = db["movie_stats"]

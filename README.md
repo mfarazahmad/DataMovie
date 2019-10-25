@@ -41,7 +41,7 @@ X Calculate a actor's most profitable movie
 
 ### Testing
 X Do a pip freeze to make a requirements.txt file listing the dependencies of the app
-- Write Unit Tests for Testing Database, Making a new Class, Testing out Anlytics Functions, Creating an app
+X Write Unit Tests for Testing Database, Making a new Class, Testing out Anlytics Functions, Creating an app
 
 ### Extra Features (Future)
 -- Fix unicode random character issues for fields like movie and actor names before importing the data into the database.
